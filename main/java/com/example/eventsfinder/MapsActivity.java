@@ -23,7 +23,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private GoogleMap mMap;
     Vector<MarkerOptions> markerOptions;
-    private String URL = "https://fd5a-202-58-91-32.ngrok-free.app/EventsFinder/all.php";
+    private String URL = "http://127.0.0.1/EventsFinder/all.php";
     RequestQueue requestQueue;
     Gson gson;
     Events[] events;
