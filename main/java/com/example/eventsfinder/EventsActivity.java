@@ -31,7 +31,7 @@ public class EventsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private EventsAdapter eventsAdapter;
     private List<Events> eventList;
-    private String URL = "https://fd5a-202-58-91-32.ngrok-free.app/EventsFinder/all.php";
+    private String URL = "http://127.0.0.1/EventsFinder/all.php";
     private RequestQueue requestQueue;
     private Gson gson;
 
