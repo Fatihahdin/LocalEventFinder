@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EventsFinder</string>
+    <string name="client_id">804614176285-p7gm9a3durrfp3olq62v0q7hmpjcjpn7.apps.googleusercontent.com</string>
+    <string name="google_maps_key">AIzaSyDsoBU2yp0J-yDday2Ct1o67wQVkD9up_Q</string>
+</resources>
