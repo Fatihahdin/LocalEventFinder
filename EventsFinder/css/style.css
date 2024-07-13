@@ -1,0 +1,440 @@
+/* Reset and global styles */
+body {
+    background-image: url('img/bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #000000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Header styles */
+header {
+    background: #222;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 
+    0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Event list table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #000; /* Change text color to black for better contrast */
+}
+
+table th, table td {
+    border: 1px solid #444; /* Keeping border color dark for visibility */
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #ddd; /* Light grey for table headers */
+}
+
+table tbody tr:hover {
+    background-color: #eee; /* Light grey for hovered rows */
+}
+
+/* Maps */
+#map-container {
+    height: 350px;
+    width: 100%; /* Full width map container */
+    border-bottom: 2px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* Ensure services section has appropriate styles */
+.services {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Container for services */
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style for service items */
+.services-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.service-item:hover .service-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.service-content .service-text {
+    color: #fff;
+}
+
+.service-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* Style for "Read More" button */
+.read-more-button {
+    background-color: #f3e307; /* Yellow background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.read-more-button:hover {
+    background-color: #f1f38e; /* Darker yellow on hover */
+}
+
+/* Footer styles */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo, .footer-contact {
+    width: 45%;
+    text-align: left;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.footer-logo p {
+    margin: 5px 0 0;
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    header .container, .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add Event form styles */
+.add-event form {
+    max-width: 600px;
+    margin: auto;
+    background: #0e0e0e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.add-event form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff; /* Change label text color to white */
+}
+
+.add-event form input[type="text"],
+.add-event form textarea,
+.add-event form select,
+.add-event form input[type="date"],
+.add-event form input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #000; /* Change input text color to black */
+    background: #fff; /* Change input background color to white */
+}
+
+.add-event form input[type="submit"] {
+    background: #333;
+    color: white; /* Ensure submit button text color is white */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.add-event form input[type="submit"]:hover {
+    background: #555;
+}
+
+
+/* Update Event form styles */
+.update-event form {
+    max-width: 600px;
+    margin: auto;
+    background: #0e0e0e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #fff; /* Text color for labels and inputs */
+}
+
+.update-event form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.update-event form input[type="text"],
+.update-event form textarea,
+.update-event form select,
+.update-event form input[type="date"],
+.update-event form input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff; /* Input background color */
+}
+
+.update-event form input[type="submit"] {
+    background: #333;
+    color: white; /* Text color for submit button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.update-event form input[type="submit"]:hover {
+    background: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+table td a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 5px;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* Add styles for update and delete buttons */
+.update-btn, .delete-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover, .delete-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Add styles for delete buttons */
+.delete-btn, .delete-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover, .delete-btn:hover {
+    background-color: #800606;
+}
+
+
+.update-event {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: #ccc 1px solid;
+}
+.update-event label {
+    font-weight: bold;
+}
+.update-event input[type="text"],
+.update-event input[type="date"],
+.update-event input[type="time"],
+.update-event textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.update-event input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.update-event input[type="submit"]:hover {
+    background: #444;
+}
+
